@@ -1,6 +1,6 @@
 FROM hub.c.163.com/nce2/nodejs:0.12.2
 
-WORKDIR /pangination-plugin
+WORKDIR ./../
 RUN echo $(pwd)
 RUN echo $(ls)
 ADD . /work_file
