@@ -13,6 +13,6 @@ services:
   web:
     build:
       context: ./
-      dockerfile: /pagination-plugin/of/Dockerfile
+      dockerfile: /pagination-plugin/docker/Dockerfile
     volumes:
       - /mnt/Data:/data
