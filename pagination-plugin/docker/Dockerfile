@@ -6,8 +6,7 @@ RUN echo $(pwd)
 RUN echo $(ls)
 ADD . /work_file
 WORKDIR /work_file
-RUN npm install cnpm --registry=https://registry.npm.taobao.org
-RUN cnpm install
-RUN cnpm run deploy
+RUN npm install --registry=https://registry.npm.taobao.org
+RUN npm run deploy
 
 COPY ./dist /data/
