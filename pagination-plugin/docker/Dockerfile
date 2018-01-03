@@ -1,5 +1,5 @@
 FROM debian:jessie
-RUN sudo apt-get update \  
+RUN apt-get update \  
   && apt-get install wget 
 RUN wget http://curl.haxx.se/download/curl-7.49.0.tar.gz \
   && tar -xvf curl-7.49.0.tar.gz \
