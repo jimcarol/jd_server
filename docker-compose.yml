@@ -7,12 +7,4 @@ services:
       - /mnt/Data:/data
     ports:
       - 80
-    depends_on:
-      - web
     command: [nginx, '-g', 'daemon off;']
-  web:
-    build:
-      context: ./pagination-plugin
-      dockerfile: /docker/Dockerfile
-    volumes:
-      - /mnt/Data:/data
