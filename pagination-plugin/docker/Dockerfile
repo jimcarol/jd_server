@@ -1,12 +1,10 @@
 FROM hub.c.163.com/nce2/nodejs:0.12.2
-RUN echo $(pwd)
-RUN echo $(ls)
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 WORKDIR /workspace/jd_server
-RUN echo $(pwd)
-RUN echo $(ls)
 ADD . /work_file
+
 WORKDIR /work_file
-RUN npm install --registry=https://registry.npm.taobao.org
-RUN npm run deploy
+RUN cnpm install
+RUN cnpm run deploy
 
 COPY ./dist /data/
