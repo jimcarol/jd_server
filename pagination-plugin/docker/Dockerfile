@@ -1,6 +1,6 @@
 FROM hub.c.163.com/nce2/nodejs:0.12.2
 
-WORKDIR ./../
+WORKDIR /workspace/jd_server
 RUN echo $(pwd)
 RUN echo $(ls)
 ADD . /work_file
