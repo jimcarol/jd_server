@@ -1,4 +1,4 @@
-FROM hub.c.163.com/nce2/nodejs:0.12.2
+FROM index.docker.io/library/node
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 WORKDIR /workspace/jd_server
 ADD . /work_file
