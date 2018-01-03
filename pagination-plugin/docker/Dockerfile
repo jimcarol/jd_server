@@ -1,13 +1,4 @@
-FROM ubuntu:16.04
-RUN apt-get install wget 
-RUN wget http://curl.haxx.se/download/curl-7.49.0.tar.gz \
-  && tar -xvf curl-7.49.0.tar.gz \
-  && cd curl-7.49.0/./configure \
-  && make \
-  && make install
-
-RUN curl -sL https://deb.nodesource.com/setup_9.x | -E bash - \
-  && apt-get install -y nodejs
+FROM hub.c.163.com/nce2/nodejs:0.12.2
 
 ADD ../ /work_file
 WORKDIR /work_file
