@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
-RUN apt-get update \  
-  && apt-get install wget 
+RUN apt-get install wget 
 RUN wget http://curl.haxx.se/download/curl-7.49.0.tar.gz \
   && tar -xvf curl-7.49.0.tar.gz \
   && cd curl-7.49.0/./configure \
