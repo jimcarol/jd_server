@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:16.04
 RUN apt-get update \  
   && apt-get install wget 
 RUN wget http://curl.haxx.se/download/curl-7.49.0.tar.gz \
