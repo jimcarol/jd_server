@@ -11,6 +11,7 @@ services:
       - web
     command: [nginx, '-g', 'daemon off;']
   web:
-    build: ./pagination-plugin/docker
+    context: ./
+    build: pagination-plugin/docker
     volumes:
       - /mnt/Data:/data
