@@ -6,5 +6,5 @@ services:
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
       - /mnt/Data:/data
     ports:
-      - "8080:80"
+      - "80:80"
     command: [nginx, '-g', 'daemon off;']
